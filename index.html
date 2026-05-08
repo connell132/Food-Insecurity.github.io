@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All About Food Insecurity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Source+Serif+4:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Source Serif 4', serif; background: #faf7f2; color: #1e1e1e; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 6%; border-bottom: 1px solid rgba(0,0,0,0.1);
+      background: #faf7f2;
+    }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 900; color: #2c4a3e; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.85rem; color: #6b6b6b; text-decoration: none; letter-spacing: 0.04em; }
+    .nav-links a:hover { color: #c04b2a; }
+
+    /* HERO */
+    #hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
+    .hero-text { display: flex; flex-direction: column; justify-content: center; padding: 6% 5% 6% 8%; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 4.5vw, 4.2rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .hero-text h1 em { font-style: italic; color: #2c4a3e; }
+    .hero-text p { font-size: 1rem; line-height: 1.75; color: #6b6b6b; font-weight: 300; max-width: 420px; }
+
+    .hero-panel { background: #2c4a3e; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem; }
+    .hero-panel .big { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 7vw, 7rem); font-weight: 900; color: #e8a030; line-height: 1; }
+    .hero-panel p { font-size: 0.95rem; color: rgba(255,255,255,0.65); margin-top: 1rem; line-height: 1.6; font-weight: 300; }
+
+    /* SHARED SECTION STYLES */
+    section { padding: 5rem 8%; }
+    section:nth-child(even) { background: #f0ece4; }
+
+    .label {
+      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #c04b2a; margin-bottom: 0.75rem; font-weight: 400;
+    }
+    section h2 {
+      font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 900; line-height: 1.15; letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    section h2 em { font-style: italic; color: #2c4a3e; }
+    .body-text { font-size: 1rem; line-height: 1.8; color: #4a4a4a; font-weight: 300; max-width: 680px; }
+
+    /* FACTS GRID */
+    .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .fact-card { background: #fff; border: 1px solid rgba(0,0,0,0.08); padding: 2rem; border-radius: 4px; }
+    .fact-card .stat { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #2c4a3e; margin-bottom: 0.75rem; }
+    .fact-card p { font-size: 0.92rem; line-height: 1.7; color: #555; font-weight: 300; }
+
+    /* LEARN MORE */
+    .learn-body { max-width: 720px; }
+    .learn-body p { font-size: 1rem; line-height: 1.8; color: #4a4a4a; font-weight: 300; margin-bottom: 1.25rem; }
+    .learn-body h2 { margin-top: 2rem; }
+
+    /* FOOTER — this was the broken rule, now fixed */
+    footer {
+      background: #2c4a3e;
+      color: rgba(255,255,255,0.45);
+      padding: 1.75rem 8%;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer span { color: #fff; font-family: 'Playfair Display', serif; font-size: 0.9rem; }
+
+    @media (max-width: 850px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-panel { min-height: 240px; }
+      .facts-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .facts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">All About Food Insecurity</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#facts">Key Facts</a></li>
+    <li><a href="#learn">Learn More</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-text">
+    <h1>Fighting hunger starts with <em>knowing</em> the truth.</h1>
+    <p>Food insecurity affects millions of families every day. This site is dedicated to educating and raising awareness about one of the most pressing issues of our time.</p>
+  </div>
+  <div class="hero-panel">
+    <div class="big">1 in 8</div>
+    <p>Americans experience food insecurity each year</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="label">About This Site</div>
+  <h2>What is <em>food insecurity?</em></h2>
+  <p class="body-text">Food insecurity is when people don't have enough to eat and don't know where their next meal will come from, and it's a big problem in the United States. 48 million people experience food insecurity yearly, and 14 million of those people are children. Food insecurity can happen to anyone, no matter your background or life. People with less pay are more likely to experience food insecurity. Other issues correlating to food insecurity involve your community, the high cost of living, or systemic barriers.</p>
+</section>
+
+<section id="facts">
+  <div class="label">Key Facts</div>
+  <h2>The Marin<br>Food Bank</h2>
+  <div class="facts-grid">
+    <div class="fact-card">
+      <div class="stat">About:</div>
+      <p>The SF Marin food bank is the main food bank in the City. It operates in over 250 pantries providing food directly to 258,000 people annually. They also distribute 67 million pounds of food and have 350+ partners. The food bank's main goal is for every family to feel financially secure and know when they can get food next.</p>
+    </div>
+    <div class="fact-card">
+      <div class="stat">Services:</div>
+      <p>In 2025, they distributed 67 million pounds of food, up from 48 million pounds in 2019. 60% is farm-fresh fruits and vegetables. In total they provided food to around 260,000 people last year — around 53,000 households weekly. The Food Bank partners with 450+ organizations and provides 2 meals for every $1 donated.</p>
+    </div>
+    <div class="fact-card">
+      <div class="stat">How you can help:</div>
+      <p>The SF Marin Food Bank makes a real difference for families and wants everyone to eat enough food every day. The food bank welcomes volunteers to help with distributing and packing food. Their address is 900 Pennsylvania Avenue, SF.</p>
+    </div>
+  </div>
+</section>
+
+<section id="learn">
+  <div class="label">Learn More</div>
+  <h2>Understanding the <em>causes</em></h2>
+  <div class="learn-body">
+    <p>The USDA (United States Department of Agriculture) defines two levels: low food security (lower quality/less variety, but enough quantity) and very low food security (reduced food intake and disrupted eating patterns). Using these 2 different levels, you can determine your level of security, and if you have food insecurity or not.</p>
+    <p>Main causes include low income, unemployment, disability, and rising food costs. If any of these are connected to your current lifestyle, there is a good chance you're dealing with food insecurity. Even if you aren't, think about others you know that might be, and show them this website so they can understand how to deal with it.</p>
+    <h2>Sources</h2>
+    <p>
+      https://www.sfmfoodbank.org/fast-facts/<br>
+      https://www.feedingamerica.org/find-your-local-foodbank/sf-marin-food-banks<br>
+      https://www.oxfamamerica.org/explore/issues/climate-action/food-insecurity/<br>
+      https://healthpolicy.ucla.edu/our-work/food-insecurity
+    </p>
+  </div>
+</section>
+
+<footer>
+  <span>All About Food Insecurity</span>
+  <div>© 2026 All rights reserved.</div>
+</footer>
+
+</body>
+</html>
